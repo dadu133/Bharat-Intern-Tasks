@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import Choice from './Choice'
 
-function App() {
+export default function App() {
+  const[text,setText]=useState("Hi how are you today")
+  const[wel,setWel]=useState(null)
+  const[cel,setCel]=useState(0)
+  setTimeout(() => {
+      setText("Welcome to the temperature converter website")
+      setWel("Click on the button to proceed further")
+  }, 1000);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+    <u><h1 style={{color:'green',backgroundColor:'magenta',textAlign:'center',marginTop:'10vh',padding:'0.7rem',border:'2px solid brown'}}>{text}</h1></u>
+     <h3 style={{textAlign:'center',fontSize:'1.7rem',color:'#f7f7f2',backgroundColor:'#f05d23'}}>{wel}</h3>
+     {wel?<button onClick={()=>{setCel(2)}} style={{marginLeft:'40vw'}}>Get Started</button>:''
+        }
+        {cel==2?<Choice/>:''}
+     </>
+  )
 }
-
-export default App;
