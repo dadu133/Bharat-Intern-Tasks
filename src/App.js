@@ -8,7 +8,7 @@ export default function App() {
   setTimeout(() => {
       setText("Welcome to the temperature converter website")
       setWel("Click on the button to proceed further")
-  }, 1000);
+  }, 3000);
   return (
     <>
     <u><h1 style={{color:'green',backgroundColor:'magenta',textAlign:'center',marginTop:'10vh',padding:'0.7rem',border:'2px solid brown'}}>{text}</h1></u>

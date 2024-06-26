@@ -16,6 +16,7 @@ function Ftok() {
     setText2(evt.target.value)
    setCheck(2);
     }
+    
    function display()
    {
        if(check==2)
